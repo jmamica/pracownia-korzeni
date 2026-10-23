@@ -1,0 +1,37 @@
+{
+  "project": "Pracownia Korzeni",
+  "package_version": "1.0",
+  "package_date": "2026-10-23",
+  "language": "pl-PL",
+  "variants": [
+    {
+      "id": "static",
+      "label": "Statyczna strona produktu",
+      "entry": "source/static/dist/index.html",
+      "runtime": "dowolny hosting statyczny",
+      "data_submission": false
+    },
+    {
+      "id": "react",
+      "label": "Interaktywna aplikacja jednostronicowa React",
+      "entry": "source/react/app/page.tsx",
+      "runtime": "Node.js >=22.13, Vinext/Vite",
+      "data_submission": false,
+      "local_storage_key": "pracownia-korzeni-config",
+      "webmcp_tools": [
+        "start_tree_configuration",
+        "read_tree_configuration"
+      ]
+    }
+  ],
+  "primary_audience": "Osoby w wieku orientacyjnie 30–60 lat szukające osobistego prezentu dla rodziców, dziadków lub rodziny albo chcące zachować historię własnego rodu.",
+  "primary_goal": "Doprowadzić użytkownika do bezpiecznego pierwszego kroku: konfiguracji, oceny posiadanych materiałów albo niezobowiązującej konsultacji.",
+  "included_assets": [
+    "hero-genealogia.png",
+    "realizacja-rodowa.png",
+    "prezent-rodzinny.png",
+    "favicon.svg"
+  ],
+  "production_backend_included": false,
+  "deployment_identity_included": false
+}

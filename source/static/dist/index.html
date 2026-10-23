@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pracownia Korzeni — indywidualne drzewa genealogiczne</title>
+  <meta name="description" content="Indywidualnie projektowane drzewa genealogiczne — spokojny proces, pełna personalizacja i rodzinna pamiątka, którą można przekazać dalej.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2319322d'/%3E%3Cpath d='M32 52V29m0 8-12-9m12 3 12-10m-12 8-7-14m7 9 7-12' stroke='%23d6b46f' stroke-width='3.2' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='27' r='6' fill='%23f5f0e7'/%3E%3Ccircle cx='25' cy='14' r='6' fill='%23f5f0e7'/%3E%3Ccircle cx='39' cy='11' r='6' fill='%23f5f0e7'/%3E%3Ccircle cx='44' cy='21' r='6' fill='%23f5f0e7'/%3E%3C/svg%3E">
+  <style>
+    :root{--ink:#16312c;--ink-2:#294740;--cream:#f5f0e7;--paper:#fffdf8;--gold:#b99052;--line:#d9d0c2;--muted:#6b6b63;--serif:Georgia,'Times New Roman',serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button,input{font:inherit}
+    .skip{position:absolute;left:-9999px;top:0}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.8rem 1rem;z-index:99}
+    .wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}.eyebrow{margin:0 0 .9rem;color:var(--gold);font-size:.78rem;font-weight:750;letter-spacing:.14em;text-transform:uppercase}.section{padding:7.5rem 0}.section-soft{background:var(--cream)}.section-dark{background:var(--ink);color:#fff}.kicker-line{display:flex;align-items:center;gap:12px}.kicker-line:before{content:"";width:42px;height:1px;background:var(--gold)}
+    h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;margin-top:0}h1{font-size:clamp(3.2rem,7vw,6.7rem);letter-spacing:-.055em;margin-bottom:1.4rem}h2{font-size:clamp(2.5rem,5vw,4.8rem);letter-spacing:-.045em;margin-bottom:1.25rem}h3{font-size:1.5rem;margin-bottom:.75rem}p{margin-top:0}.lead{font-size:clamp(1.08rem,1.8vw,1.32rem);color:#4d5c58;max-width:660px}.section-dark .lead{color:#cbd7d3}.measure{max-width:720px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:.65rem;min-height:52px;padding:.82rem 1.25rem;border:1px solid var(--ink);background:var(--ink);color:#fff;border-radius:2px;font-weight:700;cursor:pointer;transition:.2s ease}.btn:hover{transform:translateY(-2px);background:#24463f}.btn-light{background:#fff;color:var(--ink);border-color:#fff}.btn-ghost{background:transparent;color:var(--ink);border-color:#9eaaa6}.section-dark .btn-ghost{color:#fff;border-color:#789088}.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(22,49,44,.1)}nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:2rem}.brand{display:flex;align-items:center;gap:.8rem;font-family:var(--serif);font-size:1.18rem}.mark{width:34px;height:34px;border:1px solid var(--gold);display:grid;place-items:center;border-radius:50%;font-size:1.1rem}.navlinks{display:flex;align-items:center;gap:1.6rem;font-size:.92rem}.menu{display:none;background:none;border:0;padding:.7rem;cursor:pointer;color:var(--ink)}
+    .hero{min-height:calc(100vh - 76px);background:var(--ink);color:#fff;display:grid;grid-template-columns:minmax(0,46%) minmax(0,54%);overflow:hidden}.hero-copy{padding:clamp(4rem,8vw,8.5rem) max(2rem,calc((100vw - 1180px)/2));padding-right:clamp(2rem,5vw,6rem);display:flex;flex-direction:column;justify-content:center}.hero h1{max-width:780px}.hero .lead{color:#d6dfdc}.hero-media{position:relative;min-height:650px}.hero-media img{width:100%;height:100%;object-fit:cover}.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,transparent 26%),linear-gradient(0deg,rgba(4,17,14,.35),transparent 48%)}.hero-note{position:absolute;right:2rem;bottom:2rem;z-index:1;background:rgba(255,253,248,.94);color:var(--ink);padding:1.2rem 1.35rem;max-width:280px;border-left:3px solid var(--gold)}.hero-note strong{display:block;font-family:var(--serif);font-size:1.35rem;font-weight:400}
+    .intro-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(3rem,8vw,8rem);align-items:start}.statement{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3.4rem);line-height:1.18;letter-spacing:-.035em}.checks{border-top:1px solid var(--line)}.checkrow{padding:1.3rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:44px 1fr;gap:1rem}.num{color:var(--gold);font-size:.82rem;letter-spacing:.1em}.checkrow p{margin:0;color:var(--muted)}
+    .solution{display:grid;grid-template-columns:1.1fr .9fr;gap:5rem;align-items:center}.solution figure{margin:0;position:relative}.solution img{aspect-ratio:4/3;object-fit:cover}.caption{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:.8rem}.quote{font-family:var(--serif);font-size:1.65rem;line-height:1.35;border-left:2px solid var(--gold);padding-left:1.5rem;margin:2rem 0}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#36524c;border:1px solid #36524c;margin-top:3.5rem}.step{background:var(--ink);padding:2.2rem}.step b{display:block;color:var(--gold);font-size:.78rem;letter-spacing:.13em;margin-bottom:3rem}.step p{color:#cbd7d3;margin-bottom:0}.step h3{color:#fff}
+    .personal{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}.choice-list{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.choice{background:#fff;border:1px solid var(--line);padding:1.4rem}.choice span{font-size:1.4rem}.choice p{color:var(--muted);margin:0;font-size:.94rem}.readiness{background:var(--ink);color:#fff;padding:2.5rem;position:sticky;top:110px}.readiness h3{font-size:2rem}.ready-option{display:flex;gap:.8rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid #38534d}.ready-option input{accent-color:var(--gold);width:18px;height:18px;margin-top:.25rem}.ready-result{padding:1rem 1.1rem;margin-top:1.5rem;background:#233f39;color:#dfe8e5;min-height:58px}
+    .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}.plan{border:1px solid var(--line);padding:2rem;background:#fff;display:flex;flex-direction:column}.plan.featured{border-color:var(--gold);box-shadow:0 18px 60px rgba(22,49,44,.08)}.tag{align-self:flex-start;background:var(--ink);color:#fff;padding:.35rem .65rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1.25rem}.plan ul{padding-left:1.1rem;color:var(--muted);flex:1}.plan li{margin:.65rem 0}.plan small{color:var(--muted);display:block;margin-bottom:1rem}
+    .gift{display:grid;grid-template-columns:1fr 1fr;min-height:680px}.gift-copy{padding:clamp(3rem,7vw,7rem);display:flex;justify-content:center;flex-direction:column}.gift-media img{width:100%;height:100%;object-fit:cover}.occasion{display:flex;flex-wrap:wrap;gap:.55rem;margin:1.5rem 0}.occasion span{border:1px solid #769088;padding:.45rem .75rem;border-radius:100px;font-size:.84rem;color:#dce5e2}
+    .gallery{display:grid;grid-template-columns:1.25fr .75fr;gap:1rem;margin-top:3rem}.gallery img{width:100%;height:100%;object-fit:cover}.gallery-main{min-height:620px}.gallery-side{display:grid;gap:1rem}.gallery-card{position:relative;overflow:hidden;min-height:300px}.gallery-card:after{content:"";position:absolute;inset:auto 0 0;background:linear-gradient(transparent,rgba(11,33,28,.78));height:45%}.gallery-label{position:absolute;z-index:1;left:1.4rem;bottom:1.2rem;color:#fff}.gallery-label b{display:block;font-family:var(--serif);font-size:1.35rem}.crop-a img{object-position:68% 48%}.crop-b img{object-position:45% 70%}
+    .faq-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:5rem}.faq-list{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:1.2rem 0}summary{cursor:pointer;list-style:none;font-family:var(--serif);font-size:1.28rem;padding-right:2rem;position:relative}summary::-webkit-details-marker{display:none}summary:after{content:"+";position:absolute;right:.2rem;color:var(--gold)}details[open] summary:after{content:"–"}details p{color:var(--muted);margin:.85rem 2.5rem 0 0}
+    .final{text-align:center}.final h2{max-width:900px;margin-inline:auto}.final .lead{margin-inline:auto}.final .actions{justify-content:center}.micro{font-size:.84rem;color:#9fb1ac;margin-top:1rem}.contact{display:none;margin:2.5rem auto 0;max-width:640px;text-align:left;background:#fff;color:var(--ink);padding:2rem}.contact.open{display:block}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.field{display:flex;flex-direction:column;gap:.4rem}.field.full{grid-column:1/-1}.field label{font-size:.88rem;font-weight:700}.field input{min-height:48px;border:1px solid var(--line);padding:.7rem .8rem;background:#fff}.notice{display:none;background:#e6efe9;padding:1rem;margin-top:1rem}.notice.show{display:block}
+    footer{background:#0e2420;color:#b7c6c2;padding:2rem 0}.foot{display:flex;justify-content:space-between;gap:2rem;align-items:center;font-size:.86rem}.foot .brand{color:#fff}
+    @media(max-width:900px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:var(--paper);padding:1.5rem 20px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.hero{grid-template-columns:1fr}.hero-media{min-height:520px}.hero-copy{padding:5rem 24px}.intro-grid,.solution,.personal,.faq-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.plans{grid-template-columns:1fr}.gift{grid-template-columns:1fr}.gift-media{min-height:520px}.gallery{grid-template-columns:1fr}.gallery-side{grid-template-columns:1fr 1fr}.gallery-main{min-height:440px}.readiness{position:relative;top:auto}}
+    @media(max-width:580px){.wrap{width:min(100% - 28px,1180px)}.section{padding:5rem 0}h1{font-size:3.15rem}.hero-media{min-height:420px}.hero-note{left:1rem;right:1rem;bottom:1rem}.steps{grid-template-columns:1fr}.step b{margin-bottom:1rem}.choice-list,.gallery-side,.formgrid{grid-template-columns:1fr}.gallery-card{min-height:260px}.foot{flex-direction:column;align-items:flex-start}.nav .btn{display:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#tresc">Przejdź do treści</a>
+  <header>
+    <nav class="wrap" aria-label="Główna nawigacja">
+      <a class="brand" href="#start"><span class="mark" aria-hidden="true">⌁</span> Pracownia Korzeni</a>
+      <button class="menu" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
+      <div class="navlinks" id="navlinks">
+        <a href="#proces">Jak to działa</a><a href="#warianty">Warianty</a><a href="#realizacje">Realizacje</a><a href="#faq">FAQ</a>
+      </div>
+      <a class="btn" href="#kontakt">Opowiedz o swojej rodzinie</a>
+    </nav>
+  </header>
+
+  <main id="tresc">
+    <section class="hero" id="start">
+      <div class="hero-copy">
+        <p class="eyebrow kicker-line">Historia, która zostaje</p>
+        <h1>Nie kolejny przedmiot. Wasza rodzina.</h1>
+        <p class="lead">Z nazwisk, fotografii i opowieści tworzymy indywidualne drzewa genealogiczne — spokojnie, wspólnie i z dbałością o każdy szczegół.</p>
+        <div class="actions"><a class="btn btn-light" href="#kontakt">Sprawdź, od czego zacząć</a><a class="btn btn-ghost" href="#realizacje">Zobacz realizacje</a></div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/hero-genealogia.png" alt="Oprawione, bogato ilustrowane drzewo genealogiczne w eleganckim wnętrzu">
+        <div class="hero-note"><strong>Wystarczy kilka nazwisk.</strong> Resztę drogi przejdziemy razem.</div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="problem-title">
+      <div class="wrap intro-grid">
+        <div><p class="eyebrow">Znajoma sytuacja</p><h2 id="problem-title">Co podarować komuś, kto właściwie wszystko już ma?</h2></div>
+        <div>
+          <p class="statement">Najcenniejszego prezentu nie znajduje się na sklepowej półce. Czasem czeka w pudełku ze zdjęciami, w zeszycie babci i w historiach opowiadanych przy rodzinnym stole.</p>
+          <div class="checks">
+            <div class="checkrow"><span class="num">01</span><p>Zdjęcia są u kilku osób, nazwiska zapisane w różnych miejscach, a część opowieści nigdy nie została utrwalona.</p></div>
+            <div class="checkrow"><span class="num">02</span><p>Nie wiesz, ile informacji potrzeba i czy to, co już masz, wystarczy do rozpoczęcia projektu.</p></div>
+            <div class="checkrow"><span class="num">03</span><p>Chcesz mieć wpływ na efekt i zobaczyć projekt, zanim stanie się gotową pamiątką.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="wrap solution">
+        <figure><img src="assets/realizacja-rodowa.png" alt="Drzewo genealogiczne ze starymi portretami, przygotowane do rodzinnego archiwum"><figcaption class="caption">Przykładowa kompozycja rodowa • forma klasyczna</figcaption></figure>
+        <div><p class="eyebrow">Rozwiązanie</p><h2>Rozproszone historie zamieniamy w jedną, czytelną opowieść.</h2><p class="lead">Porządkujemy materiały, pomagamy uzupełnić luki i projektujemy kompozycję dopasowaną do konkretnej rodziny, okazji i wnętrza.</p><p class="quote">Nie musisz mieć gotowego drzewa. Zacznij od tego, co już wiesz.</p><p>Możesz przynieść kilka dat, fotografie bez opisów, fragment drzewa albo wyłącznie rodzinne wspomnienia. Najpierw wspólnie oceniamy materiał. Dopiero potem ustalamy właściwy zakres pracy.</p></div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="proces">
+      <div class="wrap"><p class="eyebrow">Jak to działa</p><h2>Od pierwszej rozmowy do rodzinnej pamiątki.</h2><p class="lead">Proces jest przejrzysty, a każda ważna decyzja należy do Ciebie.</p>
+        <div class="steps">
+          <article class="step"><b>01 / ROZMOWA</b><h3>Poznajemy historię</h3><p>Opowiadasz, dla kogo powstaje drzewo i jakie materiały już masz.</p></article>
+          <article class="step"><b>02 / MATERIAŁY</b><h3>Porządkujemy dane</h3><p>Łączymy nazwiska, daty, fotografie i opowieści w spójną strukturę.</p></article>
+          <article class="step"><b>03 / PROJEKT</b><h3>Wybierasz kierunek</h3><p>Ustalamy format, styl, kolorystykę i zakres. Otrzymujesz projekt do wglądu.</p></article>
+          <article class="step"><b>04 / FINAŁ</b><h3>Dopracowujemy efekt</h3><p>Po korektach przygotowujemy plik cyfrowy lub wersję gotową do wręczenia.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="personalizacja">
+      <div class="wrap personal">
+        <div><p class="eyebrow">Personalizacja</p><h2>Jedna historia. Wiele sposobów, by ją opowiedzieć.</h2><p class="lead">Kompozycja nie powstaje z gotowego szablonu. Dopasowujemy ją do liczby pokoleń, charakteru rodzinnych materiałów i miejsca, w którym ma pozostać na lata.</p>
+          <div class="choice-list">
+            <article class="choice"><span>◌</span><h3>Forma</h3><p>Od czystej typografii po kompozycję botaniczną ze zdjęciami.</p></article>
+            <article class="choice"><span>◇</span><h3>Format</h3><p>Plik cyfrowy, wydruk artystyczny lub oprawiony obraz.</p></article>
+            <article class="choice"><span>◍</span><h3>Materiały</h3><p>Portrety, dokumenty, podpisy i krótkie rodzinne historie.</p></article>
+            <article class="choice"><span>⌁</span><h3>Korekty</h3><p>Widzisz projekt i zatwierdzasz go przed finalnym wykonaniem.</p></article>
+          </div>
+        </div>
+        <aside class="readiness" aria-labelledby="ready-title"><p class="eyebrow">Szybki sprawdzian</p><h3 id="ready-title">Czy masz już dość, żeby zacząć?</h3><p>Zaznacz to, co jest dziś w Twoim zasięgu.</p>
+          <label class="ready-option"><input type="checkbox" name="ready" value="names"><span>Znam kilka imion lub nazwisk</span></label>
+          <label class="ready-option"><input type="checkbox" name="ready" value="photos"><span>Mam fotografie albo dokumenty</span></label>
+          <label class="ready-option"><input type="checkbox" name="ready" value="stories"><span>Wiem, kto w rodzinie pamięta najwięcej</span></label>
+          <div class="ready-result" id="readyResult" aria-live="polite">Zaznacz choć jedną odpowiedź.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="warianty">
+      <div class="wrap"><p class="eyebrow">Warianty współpracy</p><h2>Zakres dopasowany do tego, co już masz.</h2><p class="lead">Ostateczną wycenę ustalamy po krótkiej rozmowie — bez kupowania w ciemno.</p>
+        <div class="plans">
+          <article class="plan"><h3>Kompozycja</h3><small>Gdy masz już uporządkowane informacje</small><ul><li>projekt drzewa do 4 pokoleń</li><li>wybrany styl i kolorystyka</li><li>2 rundy korekt</li><li>plik do profesjonalnego druku</li></ul><a class="btn btn-ghost" href="#kontakt">Zapytaj o ten wariant</a></article>
+          <article class="plan featured"><span class="tag">Najczęściej wybierany</span><h3>Historia rodziny</h3><small>Gdy materiały wymagają uporządkowania</small><ul><li>konsultacja i plan materiałów</li><li>uporządkowanie danych rodzinnych</li><li>projekt ze zdjęciami i opisami</li><li>3 rundy korekt</li><li>plik cyfrowy i drukarski</li></ul><a class="btn" href="#kontakt">Rozpocznij rozmowę</a></article>
+          <article class="plan"><h3>Pamiątka premium</h3><small>Gdy prezent ma być gotowy do wręczenia</small><ul><li>pełna opieka projektowa</li><li>rozbudowana kompozycja</li><li>wydruk na papierze archiwalnym</li><li>oprawa dobrana do projektu</li><li>eleganckie pakowanie</li></ul><a class="btn btn-ghost" href="#kontakt">Omów szczegóły</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gift section-dark">
+      <div class="gift-copy"><p class="eyebrow">Prezent</p><h2>Moment wręczenia mija. Rodzinna historia zostaje.</h2><p class="lead">To prezent, który naturalnie otwiera rozmowę: o osobach ze zdjęć, dawnych miejscowościach i historii, której młodsze pokolenie mogło jeszcze nie słyszeć.</p><div class="occasion"><span>okrągłe urodziny</span><span>rocznica ślubu</span><span>jubileusz</span><span>święta</span><span>spotkanie rodzinne</span></div><p>Jeśli projekt ma być niespodzianką, pomagamy dyskretnie zebrać materiały i zaplanować termin.</p></div>
+      <div class="gift-media"><img src="assets/prezent-rodzinny.png" alt="Rodzina rozpakowująca oprawione drzewo genealogiczne"></div>
+    </section>
+
+    <section class="section" id="realizacje">
+      <div class="wrap"><p class="eyebrow">Realizacje</p><h2>Każda rodzina prowadzi projekt w inną stronę.</h2><p class="lead">Pokazujemy przykładowe kierunki kompozycji. Układ, liczba osób i materiały są zawsze dopasowywane indywidualnie.</p>
+        <div class="gallery">
+          <div class="gallery-card gallery-main"><img src="assets/realizacja-rodowa.png" alt="Klasyczne, rozbudowane drzewo genealogiczne"><div class="gallery-label"><b>Rodowa opowieść</b><span>5 pokoleń • portrety • kontekst miejsc</span></div></div>
+          <div class="gallery-side"><div class="gallery-card crop-a"><img src="assets/hero-genealogia.png" alt="Botaniczne drzewo genealogiczne w oprawie"><div class="gallery-label"><b>Botaniczna kompozycja</b><span>wydruk artystyczny</span></div></div><div class="gallery-card crop-b"><img src="assets/prezent-rodzinny.png" alt="Oprawione drzewo jako prezent rodzinny"><div class="gallery-label"><b>Prezent jubileuszowy</b><span>projekt • druk • oprawa</span></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="faq">
+      <div class="wrap faq-grid"><div><p class="eyebrow">FAQ</p><h2>Zanim zaczniemy.</h2><p class="lead">Najczęstsze pytania osób, które mają zdjęcia, kilka nazwisk i jeszcze nie wiedzą, co da się z nich stworzyć.</p></div>
+        <div class="faq-list">
+          <details open><summary>Nie mam gotowego drzewa. Czy mogę zamówić projekt?</summary><p>Tak. Wystarczy zacząć od kilku pewnych informacji. Podpowiemy, co warto zebrać od rodziny i jaki zakres będzie realny.</p></details>
+          <details><summary>Ile osób zmieści się na jednym drzewie?</summary><p>To zależy od formatu, liczby pokoleń i ilości dodatkowych materiałów. Przed rozpoczęciem proponujemy układ, który pozostanie czytelny.</p></details>
+          <details><summary>Czy zobaczę projekt przed wydrukiem?</summary><p>Tak. Otrzymasz wersję do akceptacji i możliwość wprowadzenia ustalonej liczby korekt. Nic nie trafia do druku bez Twojej zgody.</p></details>
+          <details><summary>Czy pomagacie w poszukiwaniu brakujących informacji?</summary><p>Możemy pomóc zaplanować poszukiwania i — w wybranym wariancie — sprawdzić dostępne źródła. Nie obiecujemy odnalezienia danych, których nie da się wiarygodnie potwierdzić.</p></details>
+          <details><summary>Ile trwa realizacja?</summary><p>Prosta kompozycja zwykle wymaga kilku tygodni. Rozbudowane projekty zależą od kompletności materiałów, liczby korekt i wybranej oprawy. Termin potwierdzamy przed rozpoczęciem.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark final" id="kontakt">
+      <div class="wrap"><p class="eyebrow">Pierwszy krok</p><h2>Opowiedz, dla kogo ma powstać to drzewo.</h2><p class="lead">Nie musisz porządkować wszystkiego przed rozmową. Napisz, co już masz — wspólnie sprawdzimy, jaki projekt ma sens.</p><div class="actions"><button class="btn btn-light" id="openContact" type="button">Rozpocznij niezobowiązująco</button></div><p class="micro">Pierwsza rozmowa służy ocenie materiałów i możliwości. Nie zobowiązuje do zamówienia.</p>
+        <form class="contact" id="contactForm"><div class="formgrid"><div class="field"><label for="name">Imię</label><input id="name" name="name" autocomplete="given-name" required></div><div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div><div class="field full"><label for="occasion">Dla kogo lub na jaką okazję?</label><input id="occasion" name="occasion" placeholder="np. 70. urodziny taty"></div><div class="field full"><button class="btn" type="submit">Wyślij prośbę o rozmowę</button></div></div><div class="notice" id="notice" role="status">Dziękujemy. To wersja demonstracyjna strony — formularz działa lokalnie i nie wysyła danych.</div></form>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap foot"><a class="brand" href="#start"><span class="mark" aria-hidden="true">⌁</span> Pracownia Korzeni</a><span>Indywidualne drzewa genealogiczne • Projekt demonstracyjny</span></div></footer>
+  <script>
+    const menu=document.querySelector('.menu'),links=document.getElementById('navlinks');
+    menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+    const boxes=[...document.querySelectorAll('input[name="ready"]')],result=document.getElementById('readyResult');
+    boxes.forEach(box=>box.addEventListener('change',()=>{const n=boxes.filter(b=>b.checked).length;result.textContent=n===0?'Zaznacz choć jedną odpowiedź.':n===1?'Tak — to wystarczy, żeby rozpocząć pierwszą rozmowę.':n===2?'Masz dobry punkt wyjścia. Pomożemy uporządkować kolejne kroki.':'Masz już bardzo dobry materiał startowy do projektu.'}));
+    const openContact=document.getElementById('openContact'),form=document.getElementById('contactForm'),notice=document.getElementById('notice');
+    openContact.addEventListener('click',()=>{form.classList.add('open');openContact.setAttribute('aria-expanded','true');form.querySelector('input').focus()});
+    form.addEventListener('submit',e=>{e.preventDefault();notice.classList.add('show');form.reset()});
+  </script>
+</body>
+</html>
